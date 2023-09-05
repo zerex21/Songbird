@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+  body {
+    background-color: #222;
+    /*  height: 100vh; */
+    font-family: sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  @media (max-width:1250px) {
+    .container{
+      margin: 0 20px
+    }
+
+  }
+
+@import "./header";
+@import "./greeting";
+@import "./cardBird";
+@import "./results";
+@import "./footer";
+@import "./preloader"
+
+

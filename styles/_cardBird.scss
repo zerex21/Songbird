@@ -1,0 +1,386 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.icon-play-container,
+.icon-volume-container {
+  img {
+    max-width: 45px;
+
+  }
+}
+
+
+
+.bird {
+  &-card {
+    color: white;
+    background-color: #303030;
+    background-clip: border-box;
+    max-width: 500px;
+    padding: 20px 20px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+
+    &:nth-child(even) {
+      margin-right: 0px;
+    }
+  }
+
+  &-img {
+    max-width: 200px;
+    max-height: 150px;
+    padding-right: 20px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+    }
+  }
+
+  &-view {
+    display: flex;
+  }
+
+  &-show {
+    h2 {
+      padding-bottom: 15px;
+      border-bottom: 1px solid #ffffff;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+    }
+
+    h4 {
+      padding-bottom: 25px;
+      border-bottom: 1px solid #ffffff;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &-song {
+    display: flex;
+  }
+
+  &-description {
+    margin-top: 20px;
+    max-width: 500px;
+    text-align: justify;
+  }
+}
+
+.icon-play-container {
+  margin-right: 10px;
+  img {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.line-player {
+  display: flex;
+  align-items: center;
+}
+
+.current-time {
+  padding-right: 10px;
+}
+
+.total-duration {
+  padding-left: 10px;
+}
+
+.icon-volume-container {
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  justify-content: center;
+  img {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.seek-song::-webkit-slider-thumb,
+.change_sound::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background:rgb(115, 115, 115);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  cursor: pointer;
+
+}
+
+
+.seek-song,
+.change_sound {
+ /*  overflow: scroll; */
+  appearance: none;
+  background-color: rgb(115, 115, 115);
+  height: 4px;
+  transition: opacity 2s;
+  display: inline;
+    width: 100%;
+    cursor: pointer;
+}
+.change_sound {
+  max-width: 80px;
+}
+
+
+.list-questions {
+  color: #ffffff;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #008966;
+  border-radius: 10px;
+  flex-wrap: wrap;
+}
+
+.list-question {
+  list-style-type: none;
+  padding: 10px 20px;
+  background-color: #008966;
+  text-align: center;
+  border-radius: 10px;
+
+  /****************/
+  font-size: 20px;
+
+  &_active {
+    background-color: #00bc8c;
+    list-style-type: none;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 10px;
+  }
+}
+
+.current-score {
+  color: #ffffff;
+  margin-top: 20px;
+  display: flex;
+  justify-content: end;
+
+  /****************/
+  font-size: 24px;
+}
+
+.bird-card-current {
+  margin-top: 25px;
+  margin-bottom: 50px;
+  max-width: 100%;
+  border: 1px solid #444;
+
+  .bird-show {
+    width: 100%;
+  }
+
+  .bird-song {
+    width: 86%;
+    .line-player {
+      width: 90%;
+    }
+    .seek-song {
+      display: inline;
+      width: 100%;
+    }
+  }
+
+  .control-audio {
+    display: flex;
+    width: 100%;
+  }
+}
+
+.question-answers {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.list-answers,
+.show-selected {
+  width: 48%;
+  background-color: #303030;
+  border: 1px solid #444;
+}
+
+.list-type {
+  list-style-type: none;
+  color: #ffffff;
+  padding: 10px 0;
+  border: 1px solid #444;
+  display: flex;
+  align-items: baseline;
+
+  &:hover {
+    background-color: #444;
+    cursor: pointer;
+  }
+}
+
+.list-circle {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 15px;
+  border-radius: 50%;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  background-color: #666;
+}
+
+.default-block {
+  color: #ffffff;
+  padding: 15px 10px;
+
+}
+
+.btn-container_next,
+.quiz-next {
+  width: 100%;
+}
+
+.quiz-next {
+  padding: 8px 0;
+  color: #ffffff;
+  font-size: 20px;
+  background-color: #444;
+  border: 1px solid #444;
+  margin-bottom: 100px;
+
+  &:disabled {
+    background-color: #303030;
+    color: #ffffff79;
+  }
+
+  /**/ //////////////////////////////////////////
+
+  &:not([disabled]):hover {
+    background-color: #444;
+    cursor: pointer;
+  }
+}
+
+
+/* input[type="range"]::-webkit-progress-value {
+  background-color: #9a905d;
+} */
+
+
+@media (max-width:1220px) {
+  .default-block{
+    .bird-card{
+      .bird-view{
+        display: block;
+        .bird-img{
+          padding-right: 0px;
+          display: flex;
+         margin: 0 auto;
+         img{
+          max-height: 130px;
+         }
+        }
+      }
+
+      .bird-song{
+        justify-content: center;
+      }
+    }
+  }
+
+}
+
+
+
+@media (max-width: 650px) {
+  .bird-card-current {
+    .control-audio {
+      display: block;
+    }
+    .bird-song {
+      width: 100%;
+    }
+  }
+
+  .question-answers {
+    display: block;
+    /* margin: 0 auto; */
+  }
+
+  .list-answers,
+  .show-selected {
+    width: auto;
+    background-color: #303030;
+    border: 1px solid #444;
+  }
+
+  .list-answers {
+    margin-bottom: 20px;
+  }
+}
+
+.wrongAnswer {
+  background-color: red;
+}
+
+.correctAnswer {
+  background-color: rgb(20, 245, 20);
+}
+
+@media (max-width: 590px) {
+  .list-questions {
+    display: block;
+  }
+
+  .bird {
+    &-view {
+      display: block;
+      text-align: center;
+    }
+
+    &-img {
+      margin: 0 auto;
+      padding-right: 0px;
+    }
+
+    &-show {
+      h2 {
+        padding-top: 20px;
+      }
+    }
+  }
+
+  .bird-song {
+    justify-content: center;
+  }
+
+  .icon-volume-container {
+    padding-left: 0px;
+  }
+}
+
+@media (max-width: 365px) {
+  .bird {
+    &-card {
+      padding: 10px 10px;
+    }
+  }
+}
+
+
+.quiz{
+  display: none;
+}
+

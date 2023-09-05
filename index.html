@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./imgs/Songbird_header-864x1024.webp" type="image/png">
+  <link rel="stylesheet" href="./style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <header class="header container">
+    <div class="logo">
+      <img src="./imgs/kpzsh34npf3ge.png" alt="bird">
+    </div>
+    <section class="header-greeting">
+      <nav class="container header-preview">
+        <ul class="header-preview_navigation">
+          <li class="preview_navigation list-question_active main-page">Стартовая страница</li>
+          <li class="preview_navigation quiz-page">Страница викторины</li>
+          <li class="preview_navigation gallery-page">Галерея</li>
+        </ul>
+      </nav>
+    </section>
+  </header>
+
+  <main>
+    <section class="greeting-game container">
+      <div class="greeting"> Добро пожаловать в викторину <br> "Угадай птичку!!!"</br>Нажмите "Продолжить" или на
+        "Страница викторины"</div>
+      <div class="greeting-button">
+        <button class="greeting-button_submit">Продолжить</button>
+      </div>
+    </section>
+
+    <section class="quiz container">
+      <ul class="list-questions">
+        <li class="list-question" data-question="1">Разминка</li>
+        <li class="list-question" data-question="2">Воробьиные</li>
+        <li class="list-question" data-question="3">Лесные птицы</li>
+        <li class="list-question" data-question="4">Певчие птицы</li>
+        <li class="list-question" data-question="5">Хищные птицы</li>
+        <li class="list-question" data-question="6">Морские птицы</li>
+      </ul>
+      <div class="current-score">Score: 0</div>
+      <div class="bird-card bird-card-current" data-name="${name}">
+        <div class="bird-view">
+          <div class="bird-img">
+            <img class="bird-img_default" src="./imgs/bird.06a46938.jpg" alt="bird">
+          </div>
+          <div class="bird-show">
+            <h2 class="bird-current_name">*****</h2>
+            <div class="control-audio">
+              <div class="bird-song">
+                <div class="icon-play-container">
+                  <img class="icon-play buttonPlay" src="./imgs/icons8-play-button-circled-64.png" alt="play">
+                </div>
+                <div class="line-player">
+                  <div class="current-time">00:00</div>
+                  <input type="range" min="0" max="100" value="0" class="seek-song">
+                  <div class="total-duration">00:00</div>
+                </div>
+              </div>
+              <div class="icon-volume-container">
+                <img class="icon-volume" src="./imgs/icons8-sound-64.png" alt="sound">
+                <input type="range" min="0" max="100" value="99" class="change_sound">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="question-answers">
+        <div class="list-answers">
+          <ul class="answers-current_question">
+          </ul>
+        </div>
+        <div class="show-selected">
+          <div class="default-block">
+            Послушайте плеер.<br>Выберите птицу из списка
+          </div>
+        </div>
+      </div>
+      <div class="btn-container_next">
+        <button class="quiz-next" disabled>Далее</button>
+      </div>
+    </section>
+
+
+    <section class="results container">
+      <div class="show-results">
+        <div class="not-max-result">
+          <span class="total-score">Поздравляю!!! Вы завершили игру со счетом: !</span>
+          <div class="buttons-choose">
+            <div class="button-new">
+              <button class="button-result button-restart">Переиграть</button>
+            </div>
+            <div class="button-restart">
+              <button class="button-result button-start">На главную страницу</button>
+            </div>
+          </div>
+        </div>
+        <div class="max-result">
+          <span class="total-score-max">Поздравляю!!! Вы завершили игру со счетом: !</span>
+          <div class="max-buttons-choose">
+            <div class="button-restart">
+              <button class="button-result button-start-max">На главную страницу</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section class="preloader container">
+  <span class="spinner"></span>
+</section>
+
+    <section class="gallery  container">
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <div class="additional-container">
+      <div class="gitHub">
+        <a href="https://github.com/zerex21" target="_blank">GitHub @Zerex21</a>
+      </div>
+      <div class="yearOfCreate">2022</div>
+      <div class="rsSchool">
+        <a href="https://rs.school/" target="_blank"><img src="./imgs/rs_school_js.svg" alt="rsSchool"></a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" defer src="script.js"></script>
+
+
+</body>
+
+</html>

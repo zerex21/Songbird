@@ -1,0 +1,55 @@
+.greeting {
+  font-size: 24px;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  color: #ffffff;
+  &-game{
+    margin-top: 55px;
+  }
+
+  &-name {
+    margin-top: 20px;
+    padding: 10px 10px;
+    height: 20px;
+    font-size: 20px;
+    border: 1px solid;
+    color: #ffffff;
+    background: transparent;
+    border-radius: 7px;
+    &::placeholder{
+        color: #ffffff;
+    }
+  }
+
+  &-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  &-button {
+    margin: 40px 0 100px 0;
+    display: flex;
+    justify-content: center;
+
+    &_submit {
+      padding: 10px 10px;
+      background-color: #008966;
+      border-color: #007c5d;
+      border: none;
+      font-size: 20px;
+      color: #ffffff;
+      padding: 10px 20px;
+      text-align: center;
+      border-radius: 10px;
+      &:hover{
+        cursor: pointer;
+        background-color: #00bc8c;
+      }
+    }
+  }
+}
+
+
+
+
